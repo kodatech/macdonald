@@ -1,0 +1,26 @@
+{
+  "extends": "google",
+  "parser":"babel-eslint",
+  "plugins":["babel"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "generator-star-spacing": 0,
+    "linebreak-style": "off",
+    "semi": ["error", "never"],
+    "object-curly-spacing": "off",
+    "no-unused-vars": "off",
+    "max-len": "off",
+    "no-undef": "off",
+    "padded-blocks": "off",
+    "operator-linebreak": "off",
+    "arrow-parens": "off",
+    "no-invalid-this": "off",
+    "switch-colon-spacing": 0
+  }
+}

@@ -1,0 +1,11 @@
+export const GET_CATEGORY_LIST = 'get_category_list'
+export const CATEGORY_LIST_SUCCESS = 'category_list_success'
+export const CLEAR_CATEGORY_LIST = 'clear_category_list'
+export const CATEGORY_LIST_FAIL = 'category_list_fail'
+export const GET_CATEGORY_FIRST_LEVEL = 'get_category_first_level'
+export const NO_MORE_CATEGORIES = 'no_more_categoires'
+
+export const GET_PRODUCT_LIST = 'get_product_list'
+export const PRODUCT_LIST_SUCCESS = 'product_list_success'
+export const CLEAR_PRODUCT_LIST = 'clear_product_list'
+export const PRODUCT_LIST_FAIL = 'product_list_fail'
