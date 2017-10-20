@@ -12,14 +12,13 @@ import {
 import { connect } from 'react-redux'
 import { getProductList } from '../actions'
 import {Header, Left, Button, Icon, Right, Body, Title, Card, CardItem, DeckSwiper} from 'native-base'
-import { Actions } from 'react-native-router-flux'
 
 import Swiper from 'react-native-swiper'
 
 // import ListItem from './listItem'
 
 /** This is a description of the ProductScene class. */
-class Products extends Component {
+class ProductImage extends Component {
 
   /**
   *This is a description of the componentWillMount function.
@@ -52,7 +51,7 @@ class Products extends Component {
   }
 
   /**
-  *This is a description of _onPressButtonProduct function.
+  *This is a description of _onPressButton function.
   * @param {int} id - The id of the product.
   */
   _onPressButtonProduct(id) {
@@ -116,13 +115,11 @@ class Products extends Component {
   // }
 
   /**
-  *This is a description of _onPressButtonImage function.
+  *This is a description of _onPressButton function.
   * @param {string} image - Name of the image.
   */
-  _onPressButtonImage(image) {
+  _onPressButton(image) {
     console.log(image)
-    Actions.productImage()
-
   }
 
   /**
@@ -133,7 +130,7 @@ class Products extends Component {
   renderImages(images) {
     console.log(images)
     return _.map(images, (image) => {
-      return <TouchableWithoutFeedback key={image} onPress={this._onPressButtonImage.bind(this, image)}>
+      return <TouchableWithoutFeedback key={image} onPress={this._onPressButton.bind(this, image)}>
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
           <Image
             source={{uri: 'http://macdonald.benjamin.sky/sites/default/files/styles/products/public/' + image}}
@@ -224,7 +221,7 @@ const styles = StyleSheet.create({
 })
 
 const mapStateToProps = state => {
-  // console.log(state)
+  console.log(state)
   return {
     loadingProducts: state.product.loading,
     products: state.product.productlist,
@@ -233,4 +230,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {getProductList})(Products)
+export default connect(mapStateToProps, {getProductList})(ProductImage)

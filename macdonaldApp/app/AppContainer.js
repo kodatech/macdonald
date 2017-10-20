@@ -8,6 +8,9 @@ import reducers from './reducers'
 import CategoriesScene from './scenes/categoriesScene'
 import ProductsScene from './scenes/productsScene'
 
+import ProductImage from './scenes/productImage'
+
+
 import Main from './scenes/Main'
 
 
@@ -42,6 +45,8 @@ export default class AppContainer extends Component {
             <Scene key='main' component={Main} title='Main' hideNavBar />
             <Scene key='categories' component={CategoriesScene} title='Categories' />
             <Scene key='products' component={ProductsScene} title='Products' hideNavBar />
+            <Scene key='productImage' component={ProductImage} title='Product Image' />
+
           </Stack>
         </Router>
       </Provider>

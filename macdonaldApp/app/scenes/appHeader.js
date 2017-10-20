@@ -16,7 +16,7 @@ export default class AppHeader extends Component {
   */
   render() {
     return (
-      <Header style={{backgroundColor: 'red'}}>
+      <Header style={{backgroundColor: '#b71a01'}}>
         <Left>
           <Button transparent
             onPress={
